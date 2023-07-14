@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+}
+
+:root {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+* {
+    caret-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #0b1427;
+}
+
+.dark-theme {
+    background-color: #0b1427;
+    color: #fff;
+}
+
+.dark-theme .mana-icon {
+    filter: invert(1);
+}
+
+.header {
+    font-size: calc(20px + 2vmin);
+    box-shadow: inset 0 0 10px 2px #000000;
+}
+
+.header-content {
+    width: 940px;
+    height: 104px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo img {
+    margin-right: 10px;
+}
+.logo span {
+    font-size: 0.7rem;
+}
+
+.header-nav {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, auto);
+    gap: 1rem;
+    width: 100%;
+    margin-left: 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.header-nav li {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.2rem 0.8rem;
+}
+
+.header-nav li:hover {
+    background-color: #626b81;
+}
+
+.header-nav a {
+    opacity: 0.9;
+}
+
+.header-nav a:hover {
+    opacity: 1;
+}
+
+.hover-nav {
+    position: absolute;
+    top: 104px;
+
+    z-index: 100;
+    background-color: #1f3564;
+
+    box-shadow: 0 0 10px 5px black;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    width: 150px;
+    animation: fade 0.2s ease-in-out;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.header-user-content {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 5px;
+}
+
+.install-btn {
+    background-color: #182749;
+    font-size: 0.7rem;
+    width: 100px;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.install-btn:hover {
+    background-color: #223a6e;
+}
+
+.header-user-content-avatar img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border: 2px solid #2e4e92;
+}
+
+.header-user-alerts {
+    background-color: #3c5a49;
+    width: 46px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header-user-alerts:hover {
+    background-color: #487e5f;
+    transform: scale(1.1);
+}
+
+.header-user-alerts img {
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+}
+
+.header-user-alerts img:hover {
+    animation: attention 0.4s linear;
+}
+
+.user-nav-container {
+    position: relative;
+}
+
+.user-nav {
+    position: absolute;
+    top: 50px;
+    right: 10%;
+    z-index: 100;
+    background-color: #1f3564;
+
+    box-shadow: 0 0 10px 5px black;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    width: 150px;
+    animation: fade 0.2s ease-in-out;
+}
+
+.user-nav-closed {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.user-nav-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-nav-btn-name {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 0.7rem;
+}
+.caret {
+    border-top: 5px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    cursor: pointer;
+    position: relative;
+    width: 0;
+    height: 0;
+    bottom: 5px;
+    margin-right: 5px;
+}
+
+.user-nav li {
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.user-nav li:hover {
+    background-color: #626b81;
+}
+
+.balance {
+    font-size: 0.7rem;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes attention {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
